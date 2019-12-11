@@ -1,0 +1,52 @@
+.header {
+    position: relative;
+    height: 0px;
+}
+
+
+/* bredcrumb bultiņa neparādās */
+.breadcrumb-divider {
+    content: quote(">");    
+}
+
+/* chat.html */
+#wrapper2 {
+    height: 200px;
+    border: 1px solid blue;
+    overflow-y:scroll;
+}
+ 
+
+/* main.html */
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.content {
+    position: relative;
+    height: 180px;
+}
+
+img {
+    max-width: 100%
+}
+
+
+/* mainArticles1 */
+.small-image {
+    cursor: pointer;
+}
+
+
+.footer {
+    position: relative; 
+}
+
+
+/* footer*/
+.navbar-brand.footer.text-info {
+    font-size: 12px;
+}
+

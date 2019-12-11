@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="Pictures\LogoN.png" width="160" alt="">
+            </a>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active text-info" href="main.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="mainArticles.html">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="mainChat.html">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="mainRegister.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="mainAboutUs.html">About us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <content>
+        
+        <div class="container content mt-4">
+            <div class="row mt-3">
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent">
+                            <li class="breadcrumb-item"><a class="black-text" href="main.html">Home</a></li>
+                            <li class="breadcrumb-item active">Register</li>
+                        </ol>
+                    </nav>
+                <div style="height: 20px;"></div>     
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Register</h5>
+                </div>
+            <div>
+
+            <div>
+
+                <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="Username*" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password1" placeholder="Pasword*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password2" placeholder="Retype pasword*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="firstName" aria-describedby="firstName"  placeholder="First name*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lastName" aria-describedby="lastName"  placeholder="Last name*" required>
+                    </div>
+
+                    <select class="custom-select my-1 mr-sm-2" id="countrySelect">
+                            <option selected>Country*</option>
+                            <option>Country</option>
+                            <option>Another country</option>
+                            <option>Your country</option>
+                            <option>Not so good country</option>
+                            <option>Not sure</option>
+                        </select>
+                    </select>  
+
+                    <div class="form-group form-check mt-3">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Agree with terms and conditions*</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-light">Register</button>
+
+                </form>
+
+               
+            </div>    
+        </div>
+
+
+
+    </content>
+
+
+
+
+    <footer>
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <a class="navbar-brand footer text-info" href="#">This page is made for learning purposes BY SARMĪTE POLE</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
