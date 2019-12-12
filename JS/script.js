@@ -46,20 +46,17 @@ $(function() {
 })();
 
 // chat
-$('#some-input2').keyup(function(e) {
-  var currentText = $(this).val()
-  $('#some-heading2').html(currentText)
+$('#send-btn').click(function() {
+  var usernameInput = $('#userNameInput').val()
+  var mesageInput = $('#messageInput').val()
+  // var messageTime = new Date(year, month, date, hours, minutes, seconds, ms)
+  var messageTime = new Date()
+  var newP = $('<p>' + usernameInput + ' ' + messageTime + '</p>' + '<p>' + mesageInput + '</p>' + '<hr>') 
 
-  if(event.keyCode == 13) {
+  console.log(messageTime)
 
-      var newP = $('<p>')
-      newP.html(currentText)
-      $('#wrapper2').append(newP)
-      $(this).val('')
-      $('#some-heading2').html('')
-      
-  }
-   
-     
+  $('#wrapper').append(newP)
+  $('#userNameInput').val('')
+  $('#messageInput').val('')
+
 })
-

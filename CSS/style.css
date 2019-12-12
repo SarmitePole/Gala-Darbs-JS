@@ -4,17 +4,31 @@
 }
 
 
-/* bredcrumb bultiņa neparādās */
-.breadcrumb-divider {
-    content: quote(">");    
+/* bredcrumb knābītis*/
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
 }
 
 /* chat.html */
-#wrapper2 {
-    height: 200px;
+#wrapper {
+    width: 100vh;
+    height: 25vw;
     border: 1px solid blue;
     overflow-y:scroll;
 }
+
+#userNameInput {
+    border: 1px solid blue;
+}
+
+#messageInput {
+    height: 20vh;
+    width: 70vw;
+    border: 1px solid blue;
+    overflow-y:scroll;
+}
+
+
  
 
 /* main.html */
@@ -24,11 +38,9 @@
     border-radius: 100%;
 }
 
-.content {
-    position: relative;
-    height: 180px;
-}
 
+
+/* for all */
 img {
     max-width: 100%
 }
@@ -50,3 +62,21 @@ img {
     font-size: 12px;
 }
 
+/* About Us MAp */
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:100%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+#aboutUs {
+    font-size: 14px
+}

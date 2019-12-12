@@ -45,7 +45,7 @@
         <p>Some invisible text</p>
     </div>
 
-    <div class="container content my-3">
+    <div class="container content my-1">
         <div class="row">
             <div class="col">
                 <nav aria-label="breadcrumb">
@@ -65,7 +65,7 @@
         <div>
 
         <div class="row border">
-            <div class="col-md-12" id="wrapper2">
+            <div class="col-md-12" id="wrapper">
 
             </div>
             <div class="col-md-12">
@@ -76,11 +76,19 @@
 
         
         <div class="row border mt-3">
-            <div class="col">
-                <input type="text" class="form-control" id="some-input2">
-                <h1 id = "some-heading2">haha</h1>
-            </div>
-                  
+            <div class="col-md-3">
+                <label>Username:</label>
+                <input type="text" class="form-control" id="userNameInput">
+            </div>                         
+        </div>
+        <div class="row border mt-3">
+            <div class="col-md-11 border">
+                <Label>Mesage:</Label>
+                <textarea class="form-control" id="messageInput"></textarea>
+            </div>      
+            <div class="col-md-1 align-bottom border">
+                <button id="send-btn" class="align-bottom">Send</button>
+            </div>          
         </div>
        
 
