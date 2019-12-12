@@ -12,9 +12,10 @@
 /* chat.html */
 #wrapper {
     width: 100vh;
-    height: 25vw;
+    height: 20vw;
     border: 1px solid blue;
     overflow-y:scroll;
+    font-size: 12px;
 }
 
 #userNameInput {
@@ -22,8 +23,8 @@
 }
 
 #messageInput {
-    height: 20vh;
-    width: 70vw;
+    height: 10vh;
+    width: 60vw;
     border: 1px solid blue;
     overflow-y:scroll;
 }

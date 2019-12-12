@@ -49,9 +49,10 @@ $(function() {
 $('#send-btn').click(function() {
   var usernameInput = $('#userNameInput').val()
   var mesageInput = $('#messageInput').val()
-  // var messageTime = new Date(year, month, date, hours, minutes, seconds, ms)
+  // var messageTime = new Date();
+  // dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
   var messageTime = new Date()
-  var newP = $('<p>' + usernameInput + ' ' + messageTime + '</p>' + '<p>' + mesageInput + '</p>' + '<hr>') 
+  var newP = $('<p><strong>' + usernameInput + '</strong>' + ' ' + '<style="color:grey">' + messageTime + '</style>' + '</p>' + '<p>' + mesageInput + '</p>' + '<hr>') 
 
   console.log(messageTime)
 
