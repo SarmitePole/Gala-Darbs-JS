@@ -45,31 +45,25 @@ var usr = $('#username').val()
 if (usr == '') {  
   var textValid = 'Your username is not valid, '
   } else {
-    var textValid = 'Your username is valid, '
+  var textValid = 'Your username is ok, '
 }
-
-if($('#password1').val() == $('#password2').val()) {
+  
+if ($('#password1').val() == $('#password2').val()) {
   textValid = textValid + " both password entries matches, "
-} else {
+  } else { 
   textValid = textValid + " but password entries doesn't match, "
 }
   
-if($('#firstName').val() == '') {  
+if ($('#firstName').val() == '') {  
   var textValid = textValid +' name is not valid, '
   } else {
-    var textValid = textValid +' name is valid, '
+  var textValid = textValid +' name is valid, '
 }
 
-if($('#lastName').val == '') {  
-  var textValid = textValid +' lastname is not valid, '
+if ($('#lastName').val == '') {  
+  var textValid = textValid +' lastname is not valid...but you look so nice...we accept your registration.'
   } else {
-    var textValid = textValid +' lastname is valid, '
-}
-
-if($('#countrySelect').val == 'Please choose*') {  
-  var textValid = textValid +' oooo - you are from the best country, '
-  } else {
-    var textValid = textValid +' you forgot to choose your current country, '
+  var textValid = textValid +' lastname is valid...and you look so nice...we accept your registration.'
 }
 
 $('#text-validation').append(textValid) 
