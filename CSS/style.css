@@ -3,7 +3,6 @@
     height: 0px;
 }
 
-
 /* bredcrumb knābītis*/
 .breadcrumb-item+.breadcrumb-item::before {
     content: ">";
@@ -12,7 +11,7 @@
 /* chat.html */
 #wrapper {
     width: 100vh;
-    height: 20vw;
+    height: 30vw;
     border: 1px solid blue;
     overflow-y:scroll;
     font-size: 12px;
@@ -29,9 +28,6 @@
     overflow-y:scroll;
 }
 
-
- 
-
 /* main.html */
 .carousel-indicators li {
     width: 10px;
@@ -39,28 +35,24 @@
     border-radius: 100%;
 }
 
-
-
 /* for all */
 img {
     max-width: 100%
 }
-
 
 /* mainArticles1 */
 .small-image {
     cursor: pointer;
 }
 
-
 .footer {
     position: relative; 
 }
 
-
-/* footer*/
-.navbar-brand.footer.text-info {
-    font-size: 12px;
+/* register */
+#validationBox {
+    width: 80vw;
+    height: 20vh;
 }
 
 /* About Us MAp */
@@ -80,4 +72,9 @@ img {
 
 #aboutUs {
     font-size: 14px
+}
+
+/* footer*/
+.navbar-brand.footer.text-info {
+    font-size: 12px;
 }

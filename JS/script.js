@@ -1,63 +1,76 @@
 // articles.html
 $('.small-image').hover(function() { /* atrod bildi, pievieno funkciju, ka uz hover notiks kaut kas */
 
-    var currentImgSrc = $(this).attr('src'); /* uzzinam kāda ir src vērtība tai bildei uz kuras ir pašlaik hover */
+  var currentImgSrc = $(this).attr('src'); /* uzzinam kāda ir src vērtība tai bildei uz kuras ir pašlaik hover */
 
-
-    $('#main-image').attr('src', currentImgSrc); /* atrodam lielo bildi, no viņas atribūtiem izvēlamies SRC un pasakam, ka tas būs kaut kāds cits */
-
+  $('#main-image').attr('src', currentImgSrc); /* atrodam lielo bildi, no viņas atribūtiem izvēlamies SRC un pasakam, ka tas būs kaut kāds cits */
 
 })
 
 // AboutUs
 $(function() {
-    $("#tabs").tabs();
+  $("#tabs").tabs();
 });
 
 $(function() {
-    var tabs = $("#tabs").tabs();
-    tabs.find(".ui-tabs-nav").sortable({
-      axis: "x",
-      stop: function() {
-        tabs.tabs("refresh");
-      }
-    });
+  var tabs = $("#tabs").tabs();
+  tabs.find(".ui-tabs-nav").sortable({
+    axis: "x",
+    stop: function() {
+      tabs.tabs("refresh");
+    }
+  });
 });
-
-// Register
-// validation form on page Register from getBootstrap.com
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
 
 // chat
 $('#send-btn').click(function() {
-  var usernameInput = $('#userNameInput').val()
-  var mesageInput = $('#messageInput').val()
-  // var messageTime = new Date();
-  // dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
-  var messageTime = new Date()
-  var newP = $('<p><strong>' + usernameInput + '</strong>' + ' ' + '<style="color:grey">' + messageTime + '</style>' + '</p>' + '<p>' + mesageInput + '</p>' + '<hr>') 
+var usernameInput = $('#userNameInput').val()
+var mesageInput = $('#messageInput').val()
+var messageTime = new Date().toString().slice(0, 21).substring(3)
+var newP = $('<p><strong>' + usernameInput + '</strong>' + ' ' + '<style="color:grey">' + messageTime + '</style>' + '</p>' + '<p>' + mesageInput + '</p>' + '<hr>') 
 
-  console.log(messageTime)
+$('#wrapper').append(newP)
+$('#userNameInput').val('')
+$('#messageInput').val('')
 
-  $('#wrapper').append(newP)
-  $('#userNameInput').val('')
-  $('#messageInput').val('')
+})
 
+// register validator
+
+$('#register-btn').click(function(e) {
+e.preventDefault()
+
+var usr = $('#username').val()
+
+if (usr == '') {  
+  var textValid = 'Your username is not valid, '
+  } else {
+    var textValid = 'Your username is valid, '
+}
+
+if($('#password1').val() == $('#password2').val()) {
+  textValid = textValid + " both password entries matches, "
+} else {
+  textValid = textValid + " but password entries doesn't match, "
+}
+  
+if($('#firstName').val() == '') {  
+  var textValid = textValid +' name is not valid, '
+  } else {
+    var textValid = textValid +' name is valid, '
+}
+
+if($('#lastName').val == '') {  
+  var textValid = textValid +' lastname is not valid, '
+  } else {
+    var textValid = textValid +' lastname is valid, '
+}
+
+if($('#countrySelect').val == 'Please choose*') {  
+  var textValid = textValid +' oooo - you are from the best country, '
+  } else {
+    var textValid = textValid +' you forgot to choose your current country, '
+}
+
+$('#text-validation').append(textValid) 
 })
