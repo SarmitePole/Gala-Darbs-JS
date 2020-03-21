@@ -43,9 +43,9 @@ e.preventDefault()
 var usr = $('#username').val()
 
 if (usr == '') {  
-  var textValid = 'Your username is not valid, '
+  var textValid = 'Your username is not valid or you forgot write it, '
   } else {
-  var textValid = 'Your username is ok, '
+  var textValid = 'Your username looks ok, '
 }
   
 if ($('#password1').val() == $('#password2').val()) {
@@ -55,15 +55,13 @@ if ($('#password1').val() == $('#password2').val()) {
 }
   
 if ($('#firstName').val() == '') {  
-  var textValid = textValid +' name is not valid, '
-  } else {
-  var textValid = textValid +' name is valid, '
+  var textValid = textValid +' name should be written in proper way, '
 }
 
 if ($('#lastName').val == '') {  
-  var textValid = textValid +' lastname is not valid...but you look so nice...we accept your registration.'
+  var textValid = textValid +' last name is valid...you look so nice...we accept your registration.'
   } else {
-  var textValid = textValid +' lastname is valid...and you look so nice...we accept your registration.'
+  var textValid = textValid +' last name is not valid...but you look so nice...we accept your registration.'
 }
 
 $('#text-validation').append(textValid) 
